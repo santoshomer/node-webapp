@@ -2,6 +2,12 @@ pipeline {
     agent any
     
     stages {
+        stage('Trydebug') {
+            steps {
+                sh 'whoami'
+            }
+        }
+        
         stage('Checkout') {
             steps {
                 checkout scm
