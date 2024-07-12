@@ -13,7 +13,7 @@ pipeline {
                 script {
                     //def customImage = docker.build("docker-image:${env.BUILD_ID}")
                     sh 'sudo docker build -t node-app-image:latest .'
-                    sh 'sudo docker run -d -p 3000:3000 --name node-app-container node-app-image:latest
+                    sh 'sudo docker run -d -p 3000:3000 --name node-app-container node-app-image:latest'
                     //customImage.run("-d -p 3000:3000 --name ${env.JOB_NAME}-container_${env.BUILD_NUMBER}")
                 }
             }
